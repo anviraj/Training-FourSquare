@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sidemenu_background">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_iv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/profile_icon"/>
+
+
+    <TextView
+        android:id="@+id/profileName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#DEEBFB"
+        android:textSize="32sp"
+        android:fontFamily="@font/avenir_book"
+        android:text="Login"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/favourites_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:text="   Favourites"
+        android:textColor="@color/white"
+        android:fontFamily="@font/avenir_medium"
+        android:drawableLeft="@drawable/favourite_icon_copy"
+        android:textSize="25dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#52434D"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/feedback_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="   Feedback"
+        android:textColor="@color/white"
+        android:fontFamily="@font/avenir_medium"
+        android:drawableLeft="@drawable/feedback"
+        android:textSize="25dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#52434D"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/aboutUs_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="   About Us"
+        android:textColor="@color/white"
+        android:fontFamily="@font/avenir_medium"
+        android:drawableLeft="@drawable/about"
+        android:textSize="25dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#52434D"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/logout_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="   Logout"
+        android:textColor="@color/white"
+        android:fontFamily="@font/avenir_medium"
+        android:drawableLeft="@drawable/logout_white"
+        android:textSize="25dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/logout1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="   Logout"
+        android:textColor="#474049"
+        android:fontFamily="@font/avenir_medium"
+        android:drawableLeft="@drawable/ic_baseline_logout_24"
+        android:textSize="25dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#52434D"
+        android:layout_margin="20dp"/>
+    </LinearLayout>
+</LinearLayout>

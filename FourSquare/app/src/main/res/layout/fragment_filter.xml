@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E5E5E5"
+        android:orientation="vertical"
+        tools:context=".fragments.Filter">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#370F24"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/back_icon" />
+
+            <LinearLayout
+                android:id="@+id/search_lyt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/search_lytt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/search_bg"
+                    android:paddingStart="-10dp">
+
+
+                    <SearchView
+                        android:id="@+id/search_sv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:closeIcon="@drawable/close_icon_grey"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="Search"
+                        android:searchIcon="@drawable/serch" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/done_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Done"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#370F24"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/back_icon"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/search_bg"
+                    android:paddingStart="-10dp">
+
+
+                    <SearchView
+                        android:id="@+id/nearMe_sv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:closeIcon="@drawable/close_icon_grey"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="Near Me"
+                        android:searchIcon="@drawable/near_me" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Done"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/near_by_places_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/avenir_medium"
+                    android:text="  Sort by"
+                    android:textColor="#858585"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/popular_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/popular"
+                        android:layout_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/distance_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/distance"
+                        android:layout_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/rating_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rating"
+                        android:layout_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--<androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/popular_lyt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/selectedPopular_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/popular_selected"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/popular_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/popular"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/distance_lyt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/selectedDistance_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/distance_selected"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/distance_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/distance"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rating_lyt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/selectedRating_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rating_selected"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/rating_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rating"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/avenir_medium"
+                    android:text="  Suggestions"
+                    android:textColor="#858585"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/toppick_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_book"
+                            android:text="Set Radius"
+                            android:textColor="#A3A3A3"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/setRadius_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-4dp"
+                            android:layout_marginTop="-5dp"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/avenir_book"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:inputType="number"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#A3A3A3" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rupee1_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/ruppe_btn1" />
+
+                        <ImageView
+                            android:id="@+id/rupee2_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/ruppe_btn2" />
+
+                        <ImageView
+                            android:id="@+id/rupee3_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/ruppe_btn3" />
+
+                        <ImageView
+                            android:id="@+id/rupee4_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/ruppe_btn4" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/avenir_medium"
+                    android:text="  Features"
+                    android:textColor="#858585"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/acceptCreditCards_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="Accept credit cards"
+                        android:textColor="@color/_8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+
+                    <TextView
+                        android:id="@+id/delivery_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="Delivery"
+                        android:textColor="#8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+
+                    <TextView
+                        android:id="@+id/dogFriendly_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="Dog friendly"
+                        android:textColor="#8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+
+                    <TextView
+                        android:id="@+id/familyFriendlyPlaces_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="Family-friendly places"
+                        android:textColor="#8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+
+                    <TextView
+                        android:id="@+id/inWalkingDistance_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="In walking distance"
+                        android:textColor="#8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+
+                    <TextView
+                        android:id="@+id/outdoorSeating_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="Outdoor seating"
+                        android:textColor="#8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+
+                    <TextView
+                        android:id="@+id/parking_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="Parking"
+                        android:textColor="#8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+
+
+                    <TextView
+                        android:id="@+id/wifi_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/avenir_book"
+                        android:gravity="center_vertical"
+                        android:text="Wi-Fi"
+                        android:textColor="#8D8D8D"
+                        android:textSize="20sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_add_24" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E5E5E5" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/near_you_datalist_item"/>
+
+    </LinearLayout>
+</layout>

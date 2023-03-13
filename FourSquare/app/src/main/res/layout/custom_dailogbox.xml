@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_box_background"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Overall Rating"
+                android:fontFamily="@font/avenir_medium"
+                android:textSize="34sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_marginTop="65dp"/>
+
+            <TextView
+                android:id="@+id/overall_rating_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:textColor="#36B000"
+                android:textSize="48dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/avenir_black"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="How would you rate your \n           expericence?"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/avenir_book"
+                android:textSize="24sp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/starsLyt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/star1_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/unfilled_star"/>
+
+                <ImageView
+                    android:id="@+id/star2_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/unfilled_star"/>
+
+                <ImageView
+                    android:id="@+id/star3_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/unfilled_star"/>
+
+                <ImageView
+                    android:id="@+id/star4_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/unfilled_star"/>
+
+                <ImageView
+                    android:id="@+id/star5_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/unfilled_star"/>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:dividerColor="#C3C3C3"
+                android:layout_marginTop="36dp"/>
+
+            <TextView
+                android:id="@+id/submit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Submit"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:fontFamily="@font/avenir_medium"
+                android:textColor="#351347"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_marginTop="15dp"
+            android:padding="8dp"
+            android:background="@drawable/dialogbox_close_background"
+            app:layout_constraintEnd_toEndOf="@id/layout"
+            app:layout_constraintStart_toEndOf="@id/layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

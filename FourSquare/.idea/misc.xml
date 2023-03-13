@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/drawable/custom_rating_green.xml" value="0.2645" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/drawable/custom_rating_orange.xml" value="0.2645" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/drawable/custom_rating_yellow.xml" value="0.2645" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/layout/favourites_data_list_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/layout/fragment_details.xml" value="0.25" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/layout/fragment_filter.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/layout/near_you_datalist_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/layout/review_images_detalis.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Anviraj Shetty/AndroidStudioProjects/foursquareUpdatedd-main/FourSquare/app/src/main/res/layout/search_near_by_places_data_list_item.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

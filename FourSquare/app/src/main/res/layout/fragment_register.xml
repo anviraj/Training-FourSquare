@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".fragments.Register">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1A000000">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logo_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/email_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:text="Email"
+                    android:textAlignment="center"
+                    android:textColor="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textSize="24sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logo_iv" />
+
+                <EditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#b5abab"
+                    android:textAlignment="center"
+                    android:textColorHint="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email_tv" />
+
+                <TextView
+                    android:id="@+id/mobileNum_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Mobile Number"
+                    android:textAlignment="center"
+                    android:textColor="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textSize="24sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email_et" />
+
+                <EditText
+                    android:id="@+id/mobileNum_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#b5abab"
+                    android:textAlignment="center"
+                    android:textColorHint="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mobileNum_tv" />
+
+                <TextView
+                    android:id="@+id/password_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Password"
+                    android:textAlignment="center"
+                    android:textColor="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textSize="24sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mobileNum_et" />
+
+                <EditText
+                    android:id="@+id/password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#b5abab"
+                    android:textAlignment="center"
+                    android:textColorHint="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/password_tv" />
+
+                <TextView
+                    android:id="@+id/cpassword_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Confirm Password"
+                    android:textAlignment="center"
+                    android:textColor="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textSize="24sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/password_et" />
+
+                <EditText
+                    android:id="@+id/cpassword_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#b5abab"
+                    android:textAlignment="center"
+                    android:textColorHint="#b5abab"
+                    android:fontFamily="@font/avenir_book"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cpassword_tv" />
+
+
+                <TextView
+                    android:id="@+id/login_bn_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textAllCaps="false"
+                    android:layout_margin="30dp"
+                    android:background="@drawable/login_bg"
+                    android:fontFamily="@font/avenir_book"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:padding="15dp"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toBottomOf="@id/cpassword_et"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>
